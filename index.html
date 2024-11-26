@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animal Tables</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .image-border {
+        border: 2px solid #ccc;
+        width: 50px;
+        height: 50px;
+      }
+      .image-hover {
+        position: relative;
+      }
+      .image-hover:hover img {
+        transform: scale(2);
+        z-index: 10;
+      }
+      .image-hover:hover::after {
+        content: attr(data-name);
+        position: absolute;
+        background: #fff;
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Animal Tables</h1>
+      <div id="big-cats-table-container" class="mb-5">
+        <h2>Big Cats</h2>
+        <div id="big-cats-table"></div>
+        <button
+          class="btn btn-success mt-2"
+          onclick="addAnimalForm('big-cats-table')"
+        >
+          Add Big Cat
+        </button>
+      </div>
+      <div id="dogs-table-container" class="mb-5">
+        <h2>Dogs</h2>
+        <div id="dogs-table"></div>
+        <button
+          class="btn btn-success mt-2"
+          onclick="addAnimalForm('dogs-table')"
+        >
+          Add Dog
+        </button>
+      </div>
+      <div id="big-fish-table-container" class="mb-5">
+        <h2>Big Fish</h2>
+        <div id="big-fish-table"></div>
+        <button
+          class="btn btn-success mt-2"
+          onclick="addAnimalForm('big-fish-table')"
+        >
+          Add Big Fish
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
